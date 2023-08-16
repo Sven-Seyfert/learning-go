@@ -1,0 +1,43 @@
+----------------------------------------
+Installation
+----------------------------------------
+- download
+- installation
+- new cmd > "go version" to check installation
+- vscode > extensions > "Go" (from "Go Team at Google")
+- command palatte > "Go: Install/Update Tools"
+    - select all > ok > wait for successfully installation (output)
+
+----------------------------------------
+Getting startet
+----------------------------------------
+- create main.go
+- add mod file "go mod init <myAppName>"
+
+----------------------------------------
+Build
+----------------------------------------
+- build to executable
+    - windows: "go build -o build/firstExecutable.exe main.go"
+    - others: "go build -o build/firstExecutable main.go"
+
+----------------------------------------
+Libraries
+----------------------------------------
+- get third-party library by "go get -u github.com/eiannone/keyboard"
+
+----------------------------------------
+Debugging
+----------------------------------------
+- debugging works out of the box in VSCode by "Run an Debug"
+    - default Go debugger is dlv ("delve")
+- BUT, for console applications there have to be two files configured (that user inputs can be debugged)
+    - .vscode/launch.json
+    - .vscode/tasks.json
+- prepaired json files in 20-debugging-console-applications
+
+----------------------------------------
+Workspaces
+----------------------------------------
+- in the "go.work" file the module directories have to be defined
+  otherwise the are errors regarding importing packages/modules

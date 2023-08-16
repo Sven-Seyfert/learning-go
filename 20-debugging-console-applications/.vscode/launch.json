@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceFolder}",
+            "host": "127.0.0.1",
+            "mode": "remote",
+            "name": "Connect to server",
+            "port": 23456,
+            "preLaunchTask": "delve",
+            "remotePath": "${workspaceFolder}",
+            "request": "attach",
+            "type": "go"
+        }
+    ]
+}

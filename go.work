@@ -1,0 +1,18 @@
+go 1.21.0
+
+use (
+	./01-stdin-user-input
+	./02-guess-the-number
+	./03-scope
+	./04-console-app-with-keypress
+	./05-console-app-with-keypress-2
+	./06-hammer-bitcoin-game
+	./07-string-interpolation-and-logging
+	./08-structured-types
+	./09-types
+	./20-debugging-console-applications
+	./21-rock-paper-scissors
+	./22-rock-paper-scissors-with-channels
+	./23-fastdata-tryout
+	./99-template
+)
