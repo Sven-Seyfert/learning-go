@@ -13,6 +13,8 @@ use (
 	./20-debugging-console-applications
 	./21-rock-paper-scissors
 	./22-rock-paper-scissors-with-channels
-	./23-fastdata-tryout
+	./23-single-instance-by-process
+	./24-single-instance-by-file
+	./30-fastdata-tryout
 	./99-template
 )
