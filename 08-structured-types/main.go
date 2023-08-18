@@ -3,6 +3,7 @@ package main
 import (
 	"08-structured-types/hotkey"
 	"08-structured-types/logger"
+
 	"bufio"
 	"errors"
 	"fmt"

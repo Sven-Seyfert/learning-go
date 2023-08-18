@@ -41,3 +41,38 @@ Workspaces
 ----------------------------------------
 - in the "go.work" file the module directories have to be defined
   otherwise the are errors regarding importing packages/modules
+
+----------------------------------------
+Golang Conventions
+----------------------------------------
+- package names
+    - all lowercase
+    - /packagename/ OR
+    - /package-name-with-dashed/
+- file names
+    - all lowercase
+    - source.go OR
+    - source_file_with_underscore.go
+- function names
+    - camelCase for unexported
+    - PascalCase for exported
+- import rules
+    - organize packages in groups, separated by a blank line between each group
+    - first own packages, empty line, standard library packages, empty line, third-party packages
+        - for example:
+        import (
+            "23-single-instance-by-process/process"
+
+            "fmt"
+            "os"
+
+            "github.com/shirou/gopsutil/process"
+        )
+- variable names
+    - see function names
+- constant names
+    - see function names
+- acronyms and initialisms
+    - when used in names, acronyms and initialisms should be all
+      UPPERCASE or all lowercase, depending on the context,
+      e.g., HTTPClient, jsonParser.
