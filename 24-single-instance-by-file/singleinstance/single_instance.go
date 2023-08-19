@@ -2,7 +2,7 @@ package singleinstance
 
 import "os"
 
-const instanceFile = "single_instance_indicator"
+const instanceFile = "instance_indicator"
 
 func existsInstanceFile() bool {
 	fileInfo, err := os.Stat(instanceFile)
