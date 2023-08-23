@@ -1,0 +1,1 @@
+> ⚠ Please notice: A more complete and refactored version of the approach of encrypt and decrypt strings, can be found [here](https://github.com/sven-seyfert/gomisc) which is my own package collection.

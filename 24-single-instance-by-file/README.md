@@ -1,0 +1,1 @@
+> ⚠ Please notice: A more complete and refactored version of the approach to ensure only a single instance of the program runs at the same time, can be found [here](https://github.com/sven-seyfert/gomisc) which is my own package collection.
