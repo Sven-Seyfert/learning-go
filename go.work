@@ -15,6 +15,7 @@ use (
 	./22-rock-paper-scissors-with-channels
 	./23-single-instance-by-process
 	./24-single-instance-by-file
+	./25-encrypt-decrypt
 	./30-fastdata-tryout
 	./99-template
 )
