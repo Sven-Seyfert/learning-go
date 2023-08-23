@@ -76,3 +76,23 @@ Golang Conventions
     - when used in names, acronyms and initialisms should be all
       UPPERCASE or all lowercase, depending on the context,
       e.g., HTTPClient, jsonParser.
+
+----------------------------------------
+Publish package
+----------------------------------------
+- publish
+    - commit changes
+    - push changes
+    - git tag v0.6.0
+    - git push origin –tags
+    - GOPROXY=proxy.golang.org go list -m github.com/sven-seyfert/gomisc@v0.6.0
+- usage
+    - go get -u github.com/sven-seyfert/gomisc OR
+    - go get github.com/sven-seyfert/gomisc@v0.6.0
+- check for tagged version
+    - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@latest OR
+    - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@v/list OR
+    - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@v/v0.6.0.info
+- check for documentation
+    - https://pkg.go.dev/search?q=sven-seyfert/
+    - https://pkg.go.dev/github.com/sven-seyfert/gomisc/
