@@ -20,6 +20,11 @@ Build
 - build to executable
     - windows: "go build -o build/firstExecutable.exe main.go"
     - others: "go build -o build/firstExecutable main.go"
+    - OS specific
+        - windows > GOOS=windows go build > ls > Output: "app.exe"
+        - file app.exe > app.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows
+        - windows > GOOS=linux GOARCH=ppc64 go build > ls > Output: "app"
+        - file app > app: ELF 64-bit MSB executable, 64-bit PowerPC or cisco 7500, version 1 (SYSV), statically linked, not stripped
 
 ----------------------------------------
 Libraries
@@ -83,16 +88,26 @@ Publish package
 - publish
     - commit changes
     - push changes
-    - git tag v0.6.0
+    - git tag v0.7.0
     - git push origin –tags
-    - GOPROXY=proxy.golang.org go list -m github.com/sven-seyfert/gomisc@v0.6.0
+    - GOPROXY=proxy.golang.org go list -m github.com/sven-seyfert/gomisc@v0.7.0
 - usage
     - go get -u github.com/sven-seyfert/gomisc OR
-    - go get github.com/sven-seyfert/gomisc@v0.6.0
+    - go get github.com/sven-seyfert/gomisc@v0.7.0
 - check for tagged version
     - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@latest OR
     - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@v/list OR
-    - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@v/v0.6.0.info
+    - https://proxy.golang.org/github.com/sven-seyfert/gomisc/@v/v0.7.0.info
 - check for documentation
     - https://pkg.go.dev/search?q=sven-seyfert/
     - https://pkg.go.dev/github.com/sven-seyfert/gomisc/
+
+----------------------------------------
+Linter "golangci-lint"
+----------------------------------------
+- download golangci-lint
+    - curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.54.2
+- golangci-lint --version
+- run
+    - "golangci-lint run ./..." which looks into ".golangci.yml" for settings and run the linter
+    - "golangci-lint run ./..." -v which does the same but with verbose output
