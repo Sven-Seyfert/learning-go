@@ -17,6 +17,7 @@ use (
 	./24-single-instance-by-file
 	./25-encrypt-decrypt
 	./26-simple-web-app
+	./27-simple-web-app-extended
 	./40-fastdata-tryout
 	./99-template
 )
