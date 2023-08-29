@@ -20,7 +20,9 @@ linters:
     - interfacer
     - maligned
     - nosnakecase
+    - paralleltest
     - scopelint
     - structcheck
     - varcheck
+    - wrapcheck
   # fast: true
