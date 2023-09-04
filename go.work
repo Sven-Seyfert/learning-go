@@ -18,6 +18,7 @@ use (
 	./25-encrypt-decrypt
 	./26-simple-web-app
 	./27-simple-web-app-extended
+	./28-json-handling
 	./40-fastdata-tryout
 	./99-template
 )
