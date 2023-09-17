@@ -19,6 +19,7 @@ use (
 	./26-simple-web-app
 	./27-simple-web-app-extended
 	./28-json-handling
+	./29-websocket-test
 	./40-fastdata-tryout
 	./99-template
 )
