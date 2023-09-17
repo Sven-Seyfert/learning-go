@@ -18,9 +18,9 @@ func main() {
 }
 
 func createConnection() *websocket.Conn {
-	endpointUrl := "ws://localhost:80/ws"
+	endpointURL := "ws://localhost:80/ws"
 
-	conn, _, err := websocket.DefaultDialer.Dial(endpointUrl, nil)
+	conn, _, err := websocket.DefaultDialer.Dial(endpointURL, nil)
 	if err != nil {
 		panic(err)
 	}
@@ -41,13 +41,13 @@ func consume(conn *websocket.Conn) {
 
 func sendSomeMessages(conn *websocket.Conn) {
 	send(conn, "Hello server, this is client")
-	time.Sleep(2 * time.Second)
+	time.Sleep(time.Second * 2) //nolint:gomnd
 
 	send(conn, "What you up to?")
-	time.Sleep(3 * time.Second)
+	time.Sleep(time.Second * 3) //nolint:gomnd
 
 	send(conn, "OK, bye now")
-	time.Sleep(10 * time.Second)
+	time.Sleep(time.Second * 10) //nolint:gomnd
 }
 
 func send(conn *websocket.Conn, message string) {

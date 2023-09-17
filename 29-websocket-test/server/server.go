@@ -8,16 +8,20 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var upgrader = websocket.Upgrader{
-	CheckOrigin: func(r *http.Request) bool {
-		return true
-	},
-}
+// var upgrader = websocket.Upgrader{
+// 	CheckOrigin: func(r *http.Request) bool {
+// 		return true
+// 	},
+// }
+
+var upgrader = websocket.Upgrader{}
 
 func main() {
 	// Register endpoint and listen for connections.
 	http.HandleFunc("/ws", register)
-	http.ListenAndServe("localhost:80", nil)
+	if err := http.ListenAndServe("localhost:80", nil); err != nil {
+		panic(err)
+	}
 }
 
 func register(writer http.ResponseWriter, req *http.Request) {
@@ -46,13 +50,13 @@ func consume(conn *websocket.Conn) {
 }
 
 func sendSomeMessages(conn *websocket.Conn) {
-	time.Sleep(5 * time.Second)
+	time.Sleep(time.Second * 5) //nolint:gomnd
 	send(conn, "Hello from the server")
 
-	time.Sleep(1 * time.Second)
+	time.Sleep(time.Second)
 	send(conn, "It's lovely out today, isn't it")
 
-	time.Sleep(2 * time.Second)
+	time.Sleep(time.Second * 2) //nolint:gomnd
 	send(conn, "OK, See you.")
 }
 

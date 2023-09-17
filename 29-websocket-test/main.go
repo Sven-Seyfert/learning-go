@@ -13,7 +13,7 @@ func main() {
 }
 
 type IP struct {
-	Query string
+	Query string `json:"query"`
 }
 
 func GetIP() string {
@@ -30,7 +30,9 @@ func GetIP() string {
 	}
 
 	var ip IP
-	json.Unmarshal(body, &ip)
+	if err := json.Unmarshal(body, &ip); err != nil {
+		panic(err)
+	}
 
 	return ip.Query
 }
