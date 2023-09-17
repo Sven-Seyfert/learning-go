@@ -20,6 +20,6 @@ use (
 	./27-simple-web-app-extended
 	./28-json-handling
 	./29-websocket-test
-	./40-go-course
+	./40-cmt-course
 	./99-template
 )
