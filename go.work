@@ -22,5 +22,7 @@ use (
 	./29-websocket-test
 	./40-cmt-go-course-day-one
 	./41-cmt-go-course-day-two
+	./42-cmt-go-course-day-three
+	./43-cmt-go-course-extras
 	./99-template
 )
