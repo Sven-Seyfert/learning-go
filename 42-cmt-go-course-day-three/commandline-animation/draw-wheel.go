@@ -1,3 +1,5 @@
+//nolint:go-staticcheck
+
 package main
 
 import (
@@ -10,8 +12,9 @@ func DrawWheel(s string) chan bool {
 
 	go func() {
 		for {
-			for _, u := range []rune(s) {
+			for _, u := range s {
 				fmt.Print(string(u))
+
 				select {
 				case <-quit:
 					fmt.Print("\b \b\n")
@@ -37,8 +40,7 @@ func main() {
 	time.Sleep(200 * time.Millisecond)
 
 	q = DrawWheel(".o0OÂ°*")
-	time.Sleep(5 * time.Second
-	)
+	time.Sleep(5 * time.Second)
 	close(q)
 	time.Sleep(200 * time.Millisecond)
 }
